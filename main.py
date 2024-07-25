@@ -85,7 +85,10 @@ def main():
     if result:
         print(f"Password found: {result}")
     else:
-        print("Password not found. Please try brute-force instead.")
+        if attack_type == "dictionary":
+         print("Password not found. Please try brute-force instead.")
+        else:
+         print("Password not found. Please try dictionary instead.")
 
 if __name__ == "__main__":
     main()
